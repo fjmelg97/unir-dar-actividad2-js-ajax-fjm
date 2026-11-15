@@ -1,0 +1,149 @@
+<!--
+Actividad 2: Tecnologías JavaScript y AJAX
+Fundación Universitaria Internacional de la Rioja
+Desarrollo de Aplicaciones en Red
+Felipe Jimenez Melguizo
+2026.11.14
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inspector AJAX | Actividad 2</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="brand">
+          <span class="brand-tag"
+            >Desarrollo de Aplicaciones en Red - UNIR</span
+          >
+          <h1>Actividad: Tecnologías JavaScript y AJAX</h1>
+        </div>
+        <nav aria-label="Navegación Principal">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li>
+              <a href="javascript.html" class="nav-link"
+                >Ejercicios de JavaScript</a
+              >
+            </li>
+            <li>
+              <a href="ajax.html" class="nav-link active">Inspector AJAX</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main-content">
+      <section class="hero">
+        <h2>Módulo 2: Cliente / Inspector AJAX</h2>
+        <p>
+          Realiza peticiones HTTP asíncronas mediante
+          <code>XMLHttpRequest</code> e inspecciona en tiempo real los estados,
+          cabeceras y el cuerpo de la respuesta del servidor.
+        </p>
+      </section>
+
+      <!-- Barra de Petición URL -->
+      <section class="card ajax-bar-card" aria-label="Control de petición AJAX">
+        <form id="form-ajax" class="ajax-form" novalidate>
+          <div class="form-group ajax-input-group">
+            <label for="url-recurso">URL del recurso a consultar:</label>
+            <div class="input-action-row">
+              <input type="url" id="url-recurso" required />
+              <button type="submit" id="btn-mostrar" class="btn btn-primary">
+                Mostrar Contenidos
+              </button>
+            </div>
+          </div>
+        </form>
+        <p class="helper-text">
+          Sugerencia: Se puede probar también con <code>index.html</code>,
+          <code>javascript.html</code>, <code>data/muestra.json</code> o una
+          ruta inexistente para observar códigos <code>200</code> y
+          <code>404</code>.
+        </p>
+      </section>
+
+      <!-- Paneles de Metadatos HTTP -->
+      <section
+        class="grid-three-cols"
+        aria-label="Metadatos de la petición HTTP"
+      >
+        <article class="card">
+          <div class="card-header">
+            <span class="badge">Ejercicio 3</span>
+            <h3>Estados de la petición</h3>
+          </div>
+          <pre
+            id="zona-estados"
+            class="inspector-box inspector-sm"
+            aria-live="polite"
+          >
+0 - No iniciada</pre
+          >
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <span class="badge badge-accent">Ejercicio 5</span>
+            <h3>Código de estado</h3>
+          </div>
+          <pre
+            id="zona-codigo"
+            class="inspector-box inspector-sm"
+            aria-live="polite"
+          >
+Esperando petición...</pre
+          >
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <span class="badge">Ejercicio 4</span>
+            <h3>Cabeceras HTTP de la respuesta</h3>
+          </div>
+          <pre
+            id="zona-cabeceras"
+            class="inspector-box inspector-sm"
+            aria-live="polite"
+          >
+Sin cabeceras aún...</pre
+          >
+        </article>
+      </section>
+
+      <!-- Zona Principal de Contenidos -->
+      <section
+        class="card content-viewer-card"
+        aria-label="Contenidos del archivo descargado"
+      >
+        <div class="card-header">
+          <span class="badge badge-accent">Ejercicio 2</span>
+          <h3>Contenidos del archivo</h3>
+        </div>
+        <pre
+          id="zona-contenidos"
+          class="inspector-box inspector-lg"
+          aria-live="polite"
+        >
+Pulsa "Mostrar Contenidos" para descargar el recurso...</pre
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Desarrollo de Aplicaciones en Red - Actividad 2 - UNIR</p>
+      </div>
+    </footer>
+
+    <script src="js/ajax.js"></script>
+  </body>
+</html>

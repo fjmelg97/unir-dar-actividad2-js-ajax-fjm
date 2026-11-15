@@ -1,0 +1,191 @@
+<!--
+Actividad 2: Tecnologías JavaScript y AJAX
+Fundación Universitaria Internacional de la Rioja
+Desarrollo de Aplicaciones en Red
+Felipe Jimenez Melguizo
+2026.11.14
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios JavaScript | Actividad 2</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="brand">
+          <span class="brand-tag"
+            >Desarrollo de Aplicaciones en Red - UNIR</span
+          >
+          <h1>Actividad: Tecnologías JavaScript y AJAX</h1>
+        </div>
+        <nav aria-label="Navegación Principal">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li>
+              <a href="javascript.html" class="nav-link active"
+                >Ejercicios de JavaScript</a
+              >
+            </li>
+            <li><a href="ajax.html" class="nav-link">Inspector AJAX</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main-content">
+      <section class="hero">
+        <h2>Módulo 1: Ejercicios de JavaScript</h2>
+        <p>
+          Algoritmos de validación de cadenas, comparación numérica y análisis
+          de frecuencia de caracteres.
+        </p>
+      </section>
+
+      <section
+        class="grid-two-cols"
+        aria-label="Listado de Ejercicios de JavaScript"
+      >
+        <!-- 1. Es Palíndromo -->
+        <article class="card exercise-card">
+          <div class="card-header">
+            <span class="badge">Ejercicio 1</span>
+            <h3>Detector de Palíndromos</h3>
+          </div>
+          <p class="exercise-desc">
+            Introduce una palabra para comprobar si es palíndromo.
+          </p>
+          <form id="form-palindromo" class="exercise-form" novalidate>
+            <div class="form-group">
+              <label for="input-palindromo">Cadena de entrada:</label>
+              <input
+                type="text"
+                id="input-palindromo"
+                placeholder="Ejemplo: Anilina"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Comprobar Palíndromo
+            </button>
+          </form>
+          <div id="res-palindromo" class="result-box" aria-live="polite">
+            Esperando entrada...
+          </div>
+        </article>
+
+        <!-- 2. Número Mayor -->
+        <article class="card exercise-card">
+          <div class="card-header">
+            <span class="badge">Ejercicio 2</span>
+            <h3>Comparador de dos Números</h3>
+          </div>
+          <p class="exercise-desc">
+            Introduce dos valores numéricos para determinar cual es el mayor o
+            si son iguales.
+          </p>
+          <form id="form-mayor" class="exercise-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="input-num1">Primer Número:</label>
+                <input
+                  type="number"
+                  id="input-num1"
+                  step="any"
+                  placeholder="Ejemplo: 26"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="input-num2">Segundo Número:</label>
+                <input
+                  type="number"
+                  id="input-num2"
+                  step="any"
+                  placeholder="Ejemplo: 37"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Comparar Números
+            </button>
+          </form>
+          <div id="res-mayor" class="result-box" aria-live="polite">
+            Esperando valores...
+          </div>
+        </article>
+
+        <!-- 3. Vocales en palabra -->
+        <article class="card exercise-card">
+          <div class="card-header">
+            <span class="badge">Ejercicio 3</span>
+            <h3>Vocales presentes en una Cadena</h3>
+          </div>
+          <p class="exercise-desc">
+            Analiza una cadena de texto y extrae las vocales que aparecen sin
+            repetir.
+          </p>
+          <form id="form-vocales-presentes" class="exercise-form" novalidate>
+            <div class="form-group">
+              <label for="input-cadena-vocales">Cadena a Analizar</label>
+              <input
+                type="text"
+                id="input-cadena-vocales"
+                placeholder="Ejemplo: Desarrollo web"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Detectar Vocales
+            </button>
+          </form>
+          <div id="res-vocales-presentes" class="result-box" aria-live="polite">
+            Esperando cadena...
+          </div>
+        </article>
+
+        <!-- 4. Conteo de Aparición de Vocales -->
+        <article class="card exercise-card">
+          <div class="card-header">
+            <span class="badge">Ejercicio 4</span>
+            <h3>Frecuencia de Aparición de cada Vocal</h3>
+          </div>
+          <p class="exercise-desc">
+            Cuenta cuantas veces aparece cada vocal en la cadena ingresada.
+          </p>
+          <form id="form-conteo-vocales" class="exercise-form" novalidate>
+            <div class="form-group">
+              <label for="input-cadena-conteo">Cadena a Contabilizar:</label>
+              <input
+                type="text"
+                id="input-cadena-conteo"
+                placeholder="Ejemplo: El ave velóz"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Contar Vocales
+            </button>
+          </form>
+          <div id="res-conteo-vocales" class="result-box" aria-live="polite">
+            Esperando cadena...
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Desarrollo de Aplicaciones en Red - Actividad 2 - UNIR</p>
+      </div>
+    </footer>
+
+    <script src="js/ejercicios.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!--
+Actividad 2: Tecnologías JavaScript y AJAX
+Fundación Universitaria Internacional de la Rioja
+Desarrollo de Aplicaciones en Red
+Felipe Jimenez Melguizo
+2026.11.14
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 2 | Tecnologías JavaScript y AJAX</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="brand">
+          <span class="brand-tag"
+            >Desarrollo de Aplicaciones en Red - UNIR</span
+          >
+          <h1>Actividad: Tecnologías JavaScript y AJAX</h1>
+        </div>
+        <nav aria-label="Navegación Principal">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active">Inicio</a></li>
+            <li>
+              <a href="javascript.html" class="nav-link"
+                >Ejercicios de JavaScript</a
+              >
+            </li>
+            <li><a href="ajax.html" class="nav-link">Inspector AJAX</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main-content">
+      <section class="hero">
+        <h2>Ejercicios con JavaScript y AJAX</h2>
+        <p>
+          Implementación modular de manipulación del DOM con JavaScript y
+          peticiones HTTP asíncronas mediante <code>XMLHttpRequest</code>
+        </p>
+      </section>
+
+      <section class="grid-two-cols" aria-label="Módulos de la actividad">
+        <article class="card module-card">
+          <div class="card-header">
+            <span class="badge">Parte 1</span>
+            <h3>Ejercicios de JavaScript</h3>
+          </div>
+          <p>
+            Solución interactiva de cuatro algoritmos de procesamiento de
+            cadenas y comparación numérica ejecutados localmente en el
+            navegador:
+          </p>
+          <ul class="feature-list">
+            <li>Detección de Palíndromos</li>
+            <li>Comparación de Magnitud entre dos Números</li>
+            <li>Extracción de vocales presentes en una Cadena</li>
+            <li>Conteo de Frecuencia de Aparición por Vocal</li>
+          </ul>
+          <div class="card-footer">
+            <a href="javascript.html" class="btn btn-primary"
+              >Abrir Módulo JavaScript →</a
+            >
+          </div>
+        </article>
+
+        <article class="card module-card">
+          <div class="card-header">
+            <span class="badge badge-accent">Parte 2</span>
+            <h3>Cliente / Inspector AJAX</h3>
+          </div>
+          <p>
+            Herramienta de diagnóstico HTTP en tiempo real que consulta recursos
+            sin recargar la página e inspecciona el ciclo completo de respuesta:
+          </p>
+          <ul class="feature-list">
+            <li>
+              Precarga automática de la URL actual
+              (<code>window.location.href</code>).
+            </li>
+            <li>
+              Trazabilidad de Estados de Petición (<code>readyState</code> 0-4).
+            </li>
+            <li>
+              Inspección de Código de Estado HTTP y Cabeceras del Servidor.
+            </li>
+            <li>Visualización del Cuerpo de Respuesta en Texto Plano.</li>
+          </ul>
+          <div class="card-footer">
+            <a href="ajax.html" class="btn btn-primary">Abrir Inspector AJAX →</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Desarrollo de Aplicaciones en Red - Actividad 2 - UNIR</p>
+      </div>
+    </footer>
+  </body>
+</html>
